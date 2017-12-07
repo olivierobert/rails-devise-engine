@@ -1,0 +1,7 @@
+header
+  h1
+    = t('dashboard.page_title')
+    | &nbsp;
+    small= link_to 'sign out', app_authentication.destroy_user_session_path
+main
+  p= t('dashboard.page_description')
