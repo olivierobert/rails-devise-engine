@@ -1,5 +1,10 @@
 - if user_signed_in?
-  = link_to 'sign out', app_authentication.destroy_user_session_path
+  header
+    h1= "#{controller.class.name}"
+    nav
+      = link_to 'dashboard', app_frontend.dashboard_path
+      | &nbsp;
+      = link_to 'sign out', app_authentication.destroy_user_session_path
 - else
   nav.authentication-container
     = link_to 'register', app_authentication.new_user_registration_path
