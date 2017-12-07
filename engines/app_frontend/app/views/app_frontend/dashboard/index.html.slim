@@ -1,7 +1,10 @@
 header
-  h1
-    = t('dashboard.page_title')
+  h1= "#{controller.class.name}"
+  nav
+    = link_to 'home', '/'
     | &nbsp;
-    small= link_to 'sign out', app_authentication.destroy_user_session_path
+    = link_to 'sign out', app_authentication.destroy_user_session_path
 main
   p= t('dashboard.page_description')
+
+
