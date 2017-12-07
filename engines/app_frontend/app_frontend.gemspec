@@ -9,14 +9,12 @@ Gem::Specification.new do |s|
   s.version     = AppFrontend::VERSION
   s.authors     = ['Olivier Robert']
   s.email       = ['olivierobert@gmail.com']
-  s.homepage    = 'TODO'
-  s.summary     = 'TODO: Summary of AppFrontend.'
-  s.description = 'TODO: Description of AppFrontend.'
+  s.homepage    = 'https://github.com/olivierobert/rails-devise-engine'
+  s.summary     = 'Dummy engine for the AppAuthentication POC.'
+  s.description = 'Dummy engine for the AppAuthentication POC.'
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   s.add_dependency 'rails', '~> 5.1.4'
-
-  s.add_development_dependency 'sqlite3'
 end
