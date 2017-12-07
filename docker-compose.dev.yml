@@ -1,0 +1,9 @@
+version: '3'
+services:
+  db:
+    image: postgres:9.6.1
+    container_name: rails-devise-engine_db
+    environment:
+      - POSTGRES_DB=rails-devise-engine_development
+    ports:
+      - "5432:5432"

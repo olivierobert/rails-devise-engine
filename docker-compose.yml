@@ -1,0 +1,36 @@
+version: '3'
+services:
+  db:
+    image: postgres:9.6.1
+    container_name: rails-devise-engine_db
+    environment:
+      - POSTGRES_DB=rails-devise-engine_development
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    container_name: 'rails-devise-engine_web'
+    command: bash -c "bundle check || bundle install && rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    volumes:
+      - '.:/rails-devise-engine'
+      - "ruby-bundle:/bundle"
+
+  test:
+    build: .
+    image: rails-devise-engine_test
+    entrypoint: bin/test.sh
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/rails-devise-engine
+      - "ruby-bundle:/bundle"
+    environment:
+      - RAILS_ENV=test
+
+volumes:
+  ruby-bundle:
