@@ -1,0 +1,10 @@
+header
+  h1= "#{controller.class.name}"
+  nav
+    = link_to 'home', '/'
+    | &nbsp;
+    = link_to 'sign out', app_authentication.destroy_user_session_path
+main
+  p= t('dashboard.page_description')
+
+
