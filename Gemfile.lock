@@ -6,6 +6,12 @@ PATH
       pg
       rails (~> 5.1.4)
 
+PATH
+  remote: engines/app_frontend
+  specs:
+    app_frontend (0.1.0)
+      rails (~> 5.1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -375,6 +381,7 @@ PLATFORMS
 
 DEPENDENCIES
   app_authentication!
+  app_frontend!
   awesome_print
   better_errors
   binding_of_caller

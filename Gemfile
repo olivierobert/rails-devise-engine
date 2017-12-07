@@ -20,6 +20,7 @@ gem 'slim' # Slim is a template language whose goal is reduce the syntax to the 
 # Custom Engines
 group :app_engines do
   gem 'app_authentication', path: 'engines/app_authentication'
+  gem 'app_frontend', path: 'engines/app_frontend'
 end
 
 group :development do
