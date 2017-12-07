@@ -1,5 +1,5 @@
 module AppAuthentication
-  class User < AppAuthentication.devise_class.constantize
+  class User < AppAuthentication.resource_class.constantize
     devise :database_authenticatable,
            :registerable,
            :recoverable,

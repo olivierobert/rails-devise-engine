@@ -1,1 +1,1 @@
-AppAuthentication.devise_class = 'User'
+AppAuthentication.resource_class = 'User'
