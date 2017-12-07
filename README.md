@@ -1,24 +1,5 @@
-# README
+# Re-usable authentication engine Edit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Research how to isolate authentication functionality into a Rails engine so that it can be-used as-is in other applications. 
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
