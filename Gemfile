@@ -15,6 +15,12 @@ gem 'jquery-rails' # Use jquery as the JavaScript library
 gem 'font-awesome-sass' # Font-Awesome Sass gem for use in Ruby/Rails projects
 gem 'sass-rails' # SASS
 gem 'uglifier'
+gem 'slim' # Slim is a template language whose goal is reduce the syntax to the essential parts without becoming cryptic
+
+# Custom Engines
+group :app_engines do
+  gem 'app_authentication', path: 'engines/app_authentication'
+end
 
 group :development do
   gem 'better_errors' # Better error page for Rails and other Rack apps
@@ -24,6 +30,7 @@ group :development do
   gem 'roadie-rails' # Mailers
   gem 'rubycritic', require: false # A Ruby code quality reporter
   gem 'brakeman', require: false # A static analysis security vulnerability scanner for Ruby on Rails applications
+  gem 'letter_opener_web' # Gives letter_opener an interface for browsing sent emails.
 end
 
 group :development, :test do
@@ -56,4 +63,3 @@ end
 group :production do
   gem 'rack-timeout' # Rack middleware which aborts requests that have been running for longer than a specified timeout.
 end
-gem 'app_authentication', path: 'app_authentication'
