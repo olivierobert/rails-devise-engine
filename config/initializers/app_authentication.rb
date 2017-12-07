@@ -1,0 +1,1 @@
+AppAuthentication.devise_class = 'User'

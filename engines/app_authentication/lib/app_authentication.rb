@@ -2,5 +2,5 @@ require 'app_authentication/engine'
 require 'devise'
 
 module AppAuthentication
-  # Your code goes here...
+  mattr_accessor :devise_class
 end
