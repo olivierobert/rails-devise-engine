@@ -4,15 +4,15 @@ default: &default
   USERNAME: "postgres"
   MAILER_DEFAULT_HOST: "localhost"
   MAILER_DEFAULT_PORT: "3000"
-  MAILER_SENDER: "Test <noreply@nimbl3.co>"
+  MAILER_SENDER: "Application <noreply@nimbl3.co>"
 
 development:
   <<: *default
   DB_NAME: "rails-devise-engine_development"
-  SECRET_KEY_BASE: "#{secret_key_base}"
+  SECRET_KEY_BASE: "17b279eb6ea46da2a5bf5a359938bce545d838606ceb15754e90053da822773ccc493f3922113332cb35634984e957dc6f900d44276eba532e15eba18c6d1c47"
 
 test:
   <<: *default
   DB_NAME: "rails-devise-engine_test"
   TEST_RETRY: "0"
-  SECRET_KEY_BASE: "#{secret_key_base}"
+  SECRET_KEY_BASE: "02e618c6b87ab3b890f70c60e33e39587cc1b57945df4ac774f96aeb225fa59c1bb731bc1eb00cc54ba7dfae0b916626eebb2edfbdf2642adb546b2248c5c24e"
